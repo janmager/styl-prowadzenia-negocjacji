@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Poznaj swój styl prowadzenia negocjacji - test Thomasa Kilmanna">
+    <meta property="og:description" content="Poznaj twój styl prowadzenia negocjacji dzięki testowi Thomasa Kilmanna, zostanie Tobie przedstawione 30 sytuacji, wybierz najbliższą twojej. Na koniec otrzymasz raport do jakiego stylu negocjacji najbardziej pasujesz">
+    <meta property="og:image" content="https://www.janmager.pl/styl-prowadzenia-negocjacji/preview.jpg">
+
+    <title>Poznaj swój styl prowadzenia negocjacji - test Thomasa Kilmanna</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css?ver=2">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8X0XJVVW4E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8X0XJVVW4E');
+    </script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+    <div class="container" id="start">
+        <h1>Test<br><span>Thomasa Kilmanna</span>
+        </h1>
+        <h2>Poznaj swój styl prowadzenia negocjacji</h2>
+        <p>
+            Skup się, odstaw rozpraszające Ciebie rzeczy na chwilę na bok.<br>Test zajmie ci maksymalnie 7 minut.
+        </p>
+        <p>
+            Przypomnij sobie kilka sytuacji gdzie musiałaś/eś negocjować z drugą osobą. Jak się wtedy zachowywałaś/eś?
+            Jak reagujesz w takich sytuacjach?
+        </p>
+        <p>
+            Zostanie Tobie przedstawione 30 sytuacji, w każdym pytaniu musisz wybrać odpowiedź najbardziej podobną do twojego rzeczywistego zachowania.
+        </p>
+        <div class="btn" id="start-btn">
+            Rozpocznij test
+        </div>
+        <div class="footer">
+            Test jest w pełni anonimowy, nie zbiera żadnych danych. Created by
+            <a href="https://www.janmager.pl">www.janmager.pl</a>
+        </div>
+    </div>
+
+    <div class="container" id="test">
+        <progress max="30" value="1"></progress>
+        <div class="question">
+            <span class="num-of-question" id="num-of-question"></span>
+            <div class="answers">
+                <div class="answer" id="answerA"></div>
+                <div class="answer" id="answerB">
+                    <div class="x">B</div>
+                    <span class="answer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nihil
+                        doloribus, totam. Samet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+            <div class="btn-next-question" id="next-question"></div>
+        </div>
+        <div class="footer">
+            Test jest w pełni anonimowy, nie zbiera żadnych danych. Created by
+            <a href="https://www.janmager.pl">www.janmager.pl</a>
+        </div>
+    </div>
+
+    <div class="container" id="results">
+        <h1>Test<br><span>Thomasa Kilmana</span>
+        </h1>
+        <h2>Poznaj swój styl prowadzenia negocjacji</h2>
+
+        <h3>Dominujący u ciebie styl negocjacji:</h3>
+        <h4 id="main-result"></h4>
+
+        <div class="desc-result" id="result-unikanie">
+            <p>Niska kooperatywność i niska asertywność przyczyniają się do występowania reakcji <b>unikania</b>.
+                Człowiek o
+                takich cechach wycofuje się z konfliktu, nie zależy mu ani na udowodnieniu własnych racji, ani na
+                rozpatrywaniu poglądów partnera.</p>
+            <p class="before-ul">Stosuj unikanie, gdy:
+            </p>
+            <ul>
+                <li>cel nie jest zbyt ważny lub jest ważny tylko przejściowo;</li>
+                <li>nie ma żadnych szans na zaspokojenie naszych pragnień;
+                </li>
+                <li>straty z powodu kontynuowania konfliktu przeważają nad ewentualnymi zyskami z jego rozwiązania;</li>
+                <li>trzeba sobie lub partnerom dać czas na ochłonięcie, zredukowanie napięcia emocjonalnego;</li>
+                <li>jest potrzebny czas na zebranie niezbędnych informacji do podjęcia decyzji;</li>
+                <li>inni potrafią skutecznie rozwiązać konflikt.</li>
+            </ul>
+        </div>
+
+        <div class="desc-result" id="result-dostosowanie">
+            <p>Niska asertywność i wysoka kooperatywność przyczyniają się do występowania reakcji
+                <b>akomodacyjnych/dostosowania się</b>.
+                Człowiek o takich cechach dąży do rekonstrukcji własnych poglądów, lecz czyni to nie z powodu
+                bezwzględnej akceptacji poglądów drugiej osoby, lecz raczej ze względu na pożądaną jego zdaniem
+                współpracę.</p>
+            <p class="before-ul">Stosuj dostosowanie, gdy:
+            </p>
+            <ul>
+                <li>masz świadomość, że jesteś w błędzie i pozwalasz, aby „lepsze” stanowisko zwyciężyło;</li>
+                <li>sprawa jest ważniejsza dla partnera niż dla ciebie, przyczyniasz się wtedy do utrzymania poprawnych
+                    stosunków między wami;</li>
+                <li>ważniejsze jest zdobycie zaufania partnera niż wynik rozwiązania konfliktu;</li>
+                <li>ważne jest zachowanie zgody i unikanie rozdźwięku.</li>
+            </ul>
+        </div>
+
+        <div class="desc-result" id="result-kompromis">
+            <p>Średnia asertywność i średnia kooperatywność przyczyniają się do występowania reakcji
+                <b>kompromisowych</b>.
+                Człowiek o takich cechach stara się odnieść pewne korzyści, przyznając także partnerowi prawo do ich
+                części. Może więc rezygnować z części własnych korzyści na rzecz partnera.
+            </p>
+            <p class="before-ul">Stosuj kompromis, gdy:
+            </p>
+            <ul>
+                <li>interesy nie są zbyt ważne i nie warte większych wysiłków w ich obronie;</li>
+                <li>równi sobie partnerzy zmierzają do wykluczających się celów;</li>
+                <li>konieczne jest szybkie rozwiązanie w sytuacji presji czasowej;</li>
+                <li>wystarczające jest osiągnięcie czasowego porozumienia;</li>
+                <li>zawodzi rywalizacja i współpraca.</li>
+            </ul>
+        </div>
+
+        <div class="desc-result" id="result-rywalizacja">
+            <p>Wysoka asertywność i niska kooperatywność przyczyniają się do występowania reakcji
+                <b>rywalizacyjnych</b>.
+                Człowiek o takich cechach dąży do rozstrzygania konfliktu na swoją korzyść, w tym głównie sensie, że
+                pragnie okazać wyższość własnych racji nad racjami drugiej osoby.</p>
+            <p class="before-ul">Stosuj rywalizację, gdy:
+            </p>
+            <ul>
+                <li>konieczne jest szybkie działanie, np. w kryzysie;</li>
+                <li>ważne, ale niepopularne sprawy muszą być wprowadzane w życie, np. zaostrzenie dyscypliny;</li>
+                <li>racja jest bezwzględnie po twojej stronie;</li>
+                <li>druga strona celowo stosuje taktyki nierywalizacyjne, aby uniknąć rozwiązania konfliktu.</li>
+            </ul>
+        </div>
+
+        <div class="desc-result" id="result-wspolpraca">
+            <p>Wysoka asertywność i wysoka kooperatywność przyczyniają się do występowania reakcji
+                <b>współdziałania/współpracy</b>.
+                Człowiek o takich cechach nawiązuje współpracę z partnerem po to, be zrealizować swoje cele. Można więc
+                powiedzieć, że wykorzystuje on pozytywnie sytuację konfliktu, ponieważ nie odrzuca drugiej osoby, ale
+                współdziała z nią w imię własnych interesów.</p>
+            <p class="before-ul">Stosuj współpracę, gdy:
+            </p>
+            <ul>
+                <li>ważne jest znalezienie wspólnego rozwiązania, a kompromis nikogo nie satysfakcjonuje;</li>
+                <li>sprawa dotyczy grupy osób i ważne jest uwzględnienie opinii innych osób o odmiennym sposobie
+                    widzenia problemu;</li>
+                <li>dąży się do pokonywania uczuć wrogości;</li>
+                <li>celem jest uczenie się obiektywizmu – weryfikujemy własne poglądy i staramy się zrozumieć punkt
+                    widzenia innych.</li>
+            </ul>
+        </div>
+
+        <h3 class="suma-zaznaczen">Suma zaznaczeń:</h3>
+        <div class='sumy'>
+            <p>
+                <span class="result-number">0-1</span>
+                <span class="result-txt">bardzo rzadki</span>
+            </p>
+            <p>
+                <span class="result-number">2-4</span>
+                <span class="result-txt">rzadki</span>
+            </p>
+            <p>
+                <span class="result-number">5-7</span>
+                <span class="result-txt">średni</span>
+            </p>
+            <p>
+                <span class="result-number">8-10</span>
+                <span class="result-txt">częsty</span>
+            </p>
+            <p>
+                <span class="result-number">11-12</span>
+                <span class="result-txt">bardzo częsty</span>
+            </p>
+        </div>
+
+        <h3 class="wykresy-text">Wykresy prezentujące twój styl negocjacji:</h3>
+        <div class="wykresy">
+            <div id="chart1Here">
+                <canvas id="myChart1"></canvas>
+            </div>
+            <div id="chart2Here">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+        <div class="endBtns">
+          <a href="javascript:window.location.href=window.location.href" class="btn backSiteBtn">
+            Powtórz test
+          </a>
+        </div>
+
+        <div class="footer">
+            Test jest w pełni anonimowy, nie zbiera żadnych danych. Created by
+            <a href="https://www.janmager.pl">www.janmager.pl</a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

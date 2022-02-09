@@ -1,0 +1,15 @@
+{
+    "name": "Poznaj swój styl prowadzenia negocjacji - test Thomasa Kilmana",
+    "short_name": "Test Thomasa Kilmana",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Poznaj swój styl prowadzenia negocjacji - test Thomasa Kilmana",
+    "icons": [
+        {
+            "src": "favicon/favicon.png",
+            "sizes": "500x500",
+            "type": "image/png"
+        }
+    ]
+}
